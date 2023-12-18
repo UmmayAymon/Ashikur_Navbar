@@ -1,0 +1,74 @@
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+    --primaryFont: 'Poppins', sans-serif;
+    --secondaryFont: 'PT Sans', sans-serif;
+    --PrimaryColor: #FFCC00;
+    --TextColor: #353535;
+}
+
+/* COMMON CSS STARTS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6,p,span,ul,ol{
+    margin: 0;
+    padding: 0;
+}
+
+ul,ol{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: var(--primaryFont);
+}
+/* /* COMMON CSS ENDS * */
+
+/* NAV SECTION STARTS */
+#menu ul li a{
+    color: #353535;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 200%;
+    text-transform: uppercase;
+    padding: 18px 22px 5px;
+    position: relative;
+}
+
+#menu ul li a::after{
+    content: '';
+    width: 0%;
+    height: 1px;
+    background-color: var(--TextColor);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+}
+
+#menu ul li:hover a::after{
+    width: 100%;
+}
+
+nav .navbar-toggler{
+    border: 0;
+    box-shadow: none !important;
+}
+
+@media (min-width: 300px) and (max-width: 768px){
+    nav{
+        background: #FFF;
+        box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.10);
+    }
+}
+
+/* NAV SECTION ENDS */
